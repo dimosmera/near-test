@@ -1,4 +1,4 @@
-const CONTRACT_NAME = "nfts.examples.testnet";
+const CONTRACT_NAME = "nft.examples.testnet";
 
 /**
  * Returns a NEAR testnet config

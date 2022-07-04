@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import { Buffer } from "buffer";
 
 import "./index.css";
-import App from "./App";
+import App from "components/App";
 import initNear from "utils/initNear";
 import NearProvider from "context/NearProvider";
 import ContractProvider from "context/ContractProvider";

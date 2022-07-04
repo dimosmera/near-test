@@ -56,7 +56,7 @@ const NearProvider = ({
   };
 
   const signIn = () => {
-    wallet.requestSignIn(nearConfig.contractName, "NEAR Corgi");
+    wallet.requestSignIn(nearConfig.contractName);
   };
 
   const signOut = () => {
