@@ -1,7 +1,7 @@
 import logo from "assets/logo.svg";
 import { useGetContractContext } from "context/ContractProvider/ContractProvider";
 import { useGetNearContext } from "context/NearProvider/NearProvider";
-import useGetTxResults from "components/hooks/useGetTxResults";
+import useGetTxResults from "hooks/useGetTxResults";
 
 import "./App.css";
 import * as Style from "./styled";
