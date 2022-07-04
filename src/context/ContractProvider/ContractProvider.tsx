@@ -39,17 +39,7 @@ const ContractProvider = ({ Contract, mintFee, children }: Props) => {
     initialContractState
   );
 
-  // const getActiveCorgi = useCallback(
-  //   (id) => {
-  //     dispatchContract({ type: ACTION_START });
-  //     Contract.get_corgi_by_id({ id })
-  //       .then((corgi) => dispatchContract({ type: GET_CORGI_SUCCESS, payload: { corgi } }))
-  //       .catch((error) => dispatchContract({ type: ACTION_ERROR, payload: { error } }));
-  //   },
-  //   [Contract],
-  // );
-
-  // receiver, id, metadata can be passed here. Right now they are hardcoded
+  // TODO: receiver, id, metadata can be passed here. Right now they are hardcoded
   const mintNFT = useCallback(() => {
     dispatchContract({ type: ActionTypes.ACTION_START });
     Contract.nft_mint(
