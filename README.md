@@ -1,18 +1,16 @@
-# Getting Started with Create React App
+# near-api-js front-end implementation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Interacts with the [nft.examples.testnet](https://github.com/near-examples/NFT) contract
+
+Calls the `nft_mint` to mint a new NFT
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To get project dependencies
 
 ### `yarn test`
 
