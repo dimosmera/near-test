@@ -56,7 +56,7 @@ const NearProvider = ({
   };
 
   const signIn = () => {
-    wallet.requestSignIn(nearConfig.contractName);
+    wallet.requestSignIn(nearConfig.contractName, "near-test");
   };
 
   const signOut = () => {
@@ -86,7 +86,7 @@ const NearProvider = ({
   useEffect(() => {
     if (
       !nearState.user &&
-      !localStorage.getItem("undefined_wallet_auth_key") &&
+      !localStorage.getItem("near-test_wallet_auth_key") &&
       !nearState.error
     ) {
       localStorage.clear();

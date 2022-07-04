@@ -68,7 +68,6 @@ const ContractProvider = ({ Contract, mintFee, children }: Props) => {
       DEPOSIT_TO_COVER_STORAGE
     )
       .then((result) => {
-        console.log("result: ", result);
         dispatchContract({ type: ActionTypes.ACTION_SUCCESS });
       })
       .catch((error) =>
