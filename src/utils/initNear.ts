@@ -1,11 +1,11 @@
 import { connect, WalletConnection, Contract, keyStores } from "near-api-js";
 
-import logo from "./logo.svg";
-import "./App.css";
 import getNearConfig from "configs/near";
-import { useEffect } from "react";
 
-const initContract = async () => {
+/**
+ * Initializes a connection to NEAR, the current contract and loads user's account data
+ */
+const initNear = async () => {
   const nearConfig = getNearConfig();
 
   // Initializing connection to NEAR
@@ -15,7 +15,6 @@ const initContract = async () => {
   });
 
   const walletConnection = new WalletConnection(near, "near-test");
-  console.log("walletConnection: ", walletConnection);
 
   // Load in account data
   let currentUser;
@@ -25,8 +24,6 @@ const initContract = async () => {
       balance: (await walletConnection.account().state()).amount,
     };
   }
-
-  console.log("currentUser: ", currentUser);
 
   // Initializing contract APIs
   const contract = new Contract(
@@ -40,8 +37,6 @@ const initContract = async () => {
     }
   );
 
-  console.log("contract: ", contract);
-
   return {
     contract,
     currentUser,
@@ -51,34 +46,4 @@ const initContract = async () => {
   };
 };
 
-function App() {
-  useEffect(() => {
-    const init = async () => {
-      const result = await initContract();
-      console.log("result: ", result);
-    };
-
-    init();
-  }, []);
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export default initNear;
